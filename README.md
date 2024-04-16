@@ -1,4 +1,4 @@
-![image](https://github.com/chandrumathiyazhagan/EXNO-4-DS/assets/119393023/6b07f2c2-ad3c-47b6-8a1f-8eec89c0164f)# EXNO:4-DS
+# EXNO:4-DS
 # AIM:
 To read the given data and perform Feature Scaling and Feature Selection process and save the
 data to a file.
@@ -32,31 +32,38 @@ import numpy as np
 df=pd.read_csv("/content/bmi.csv")
 df.head()
 ```
+![Screenshot 2024-04-16 105854](https://github.com/chandrumathiyazhagan/EXNO-4-DS/assets/119393023/16eab2bb-3f7a-4272-bfdd-7399873cc400)
+
 ```
 df.dropna()
 ```
+
 ```
 max_vals=np.max(np.abs(df[['Height','Weight']]))
 max_vals
 ```
+
 ```
 from sklearn.preprocessing import StandardScaler
 sc=StandardScaler()
 df[['Height','Weight']]=sc.fit_transform(df[['Height','Weight']])
 df.head(10)
 ```
+
 ```
 from sklearn.preprocessing import MinMaxScaler
 sc=MinMaxScaler()
 df[['Height','Weight']]=sc.fit_transform(df[['Height','Weight']])
 df.head(10)
 ```
+
 ```
 from sklearn.preprocessing import Normalizer
 Scaler=Normalizer
 df[['Height','Weight']]=sc.fit_transform(df[['Height','Weight']])
 df
 ```
+
 ```
 df=pd.read_csv("/content/bmi.csv")
 ```
